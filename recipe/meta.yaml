@@ -1,6 +1,6 @@
 {% set name = "h5glance" %}
 {% set org = "European-XFEL" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: dd848a967112f0a0d1d04a1739afbe7dc7bac682b93b8017e5d5a11ca8260c5d
+  sha256: 65bfe1d52f4c5e5356fcba86c558e82d24cc73dddd71c99b434a09c15cf94a71
 
 build:
   number: 0
