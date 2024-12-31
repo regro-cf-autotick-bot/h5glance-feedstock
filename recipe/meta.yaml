@@ -11,7 +11,7 @@ source:
   sha256: 65bfe1d52f4c5e5356fcba86c558e82d24cc73dddd71c99b434a09c15cf94a71
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,17 +20,18 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - h5py >=2.10
     - htmlgen
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - {{ name }}
   commands:
